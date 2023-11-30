@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ms. Stella, The Destroyer of Worlds</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://unpkg.com/htmx.org@1.7.0/dist/htmx.js"></script>
+    <style>
+        /* Custom styles for the image and quote */
+        #image-container img {
+            max-width: 50%; /* Make the image responsive */
+            height: auto;
+        }
+
+        #quote {
+            font-size: 1.5em; /* Increase the font size of the quote */
+        }
+
+        #author {
+            font-size: 1.2em; /* Increase the font size of the author */
+            margin-top: 10px; /* Add some margin between quote and author */
+        }
+    </style>
+</head>
+<body class="bg-rose">
+
+    <header class="text-white text-center p-3 bg-rose">
+        <h1 class="display-4 font-weight-bold">Ms. Stella, The Destroyer of Worlds</h1>
+    </header>
+
+    <!-- Cat Image Card -->
+    <div class="container mt-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Meet Ms. Stella</h5>
+                <!-- Trigger the image fetch on click -->
+                <div id="image-container" class="mt-3">
+                    <img src="http://localhost:8080/api/v1/image" alt="Ms. Stella" class="card-img img-fluid img-thumbnail rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Card -->
+    <div class="container mt-4">
+        <div class="card text-center">
+            <div class="card-body">
+               <h5 class="card-title">Quote of the Day</h5>
+                <blockquote class="blockquote">
+                    <p id="quote" class="mb-0">{{ .Quote }}</p>
+                    <footer id="author" class="blockquote-footer">{{ .Author }}</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
