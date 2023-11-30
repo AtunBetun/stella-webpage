@@ -1,0 +1,4 @@
+root = "."
+build = "go build -o ./tmp/stella-webpage."
+cmd = "./tmp/stella-webpage"
+port = 8080

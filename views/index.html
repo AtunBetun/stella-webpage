@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,9 +25,10 @@
         }
     </style>
 </head>
-<body class="bg-rose">
 
-    <header class="text-white text-center p-3 bg-rose">
+<body class="bg-light">
+
+    <header class="text-white text-center p-3 bg-danger">
         <h1 class="display-4 font-weight-bold">Ms. Stella, The Destroyer of Worlds</h1>
     </header>
 
@@ -37,7 +39,8 @@
                 <h5 class="card-title">Meet Ms. Stella</h5>
                 <!-- Trigger the image fetch on click -->
                 <div id="image-container" class="mt-3">
-                    <img src="http://localhost:8080/api/v1/image" alt="Ms. Stella" class="card-img img-fluid img-thumbnail rounded">
+                    <img src="https://stella-webpage.fly.dev/api/v1/image" alt="Ms. Stella"
+                        class="card-img img-fluid img-thumbnail rounded">
                 </div>
             </div>
         </div>
@@ -47,7 +50,7 @@
     <div class="container mt-4">
         <div class="card text-center">
             <div class="card-body">
-               <h5 class="card-title">Quote of the Day</h5>
+                <h5 class="card-title">Quote of the Day</h5>
                 <blockquote class="blockquote">
                     <p id="quote" class="mb-0">{{ .Quote }}</p>
                     <footer id="author" class="blockquote-footer">{{ .Author }}</footer>
@@ -57,4 +60,5 @@
     </div>
 
 </body>
+
 </html>
